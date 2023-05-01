@@ -1,10 +1,26 @@
-The script first defines a list of consonant clusters called `lst`, and then prompts the user to enter a sentence using the `input()` function. The sentence is then split into individual words using the `split()` function and stored in a list called `sentence`.
+### Description
+This script takes a sentence as input from the user and converts it into pig latin. It follows the following rules:
 
-A `for` loop is then used to iterate over each word in the `sentence` list. The variable `P` is used to represent the index of the current word, and the variable `i` is used to represent the current word itself. 
+- If a word starts with a vowel, add 'ay' to the end of the word.
+- If a word starts with a consonant, move the consonant to the end of the word and add 'ay'.
+- If a word starts with a consonant cluster, move the cluster to the end of the word and add 'ay'.
+- If a word has non-alphabetic characters, keep it as it is.
 
-- The first `if` statement checks if the word is a single letter and simply adds 'ay' to the end of the word. 
-- The second `elif` statement checks if the word begins with a vowel and adds 'ay' to the end of the word. 
-- The third `elif` statement checks if the first two letters of the word form a consonant cluster listed in `lst`, and if so, moves the consonant cluster to the end of the word and appends 'ay'. 
-- The fourth `elif` statement checks if the word contains non-alphabetic characters and simply leaves the word unchanged. Finally, the `else` statement applies the default Pig Latin transformation of moving the first consonant of the word to the end and appending 'ay'.
+### Functionality
+The script contains one main function, main(), which performs the following actions:
 
-The `t()` function defined below `main()` is a helper function that returns the first two characters of a string, used for checking whether a word begins with a consonant cluster listed in `lst`.
+1. Initializes a list of consonant clusters.
+2. Takes a sentence as input from the user.
+3. Splits the sentence into individual words.
+4. Iterates over each word in the sentence and applies the pig latin conversion rules.
+5. Joins the converted words back into a sentence and returns it.
+The script also contains a helper function, t(str), which returns the first two characters of a string.
+
+### Usage
+1. Run the script.
+2. Enter a sentence when prompted.
+3. The script will output the pig latin version of the sentence.
+### Improvements
+Add error handling for cases where the user enters invalid input (e.g. a number instead of a sentence).
+Add unit tests to ensure the script is working correctly.
+Refactor the code to improve readability and maintainability.
